@@ -167,7 +167,7 @@ for (let i = 0; i < posterEl.length; i++) {
 }
 
 let btnCarregarEl = document.querySelector("#carregarbtn");
-
+let confirmacaoEl = document.querySelector(".confirmacao"); 
 btnCarregarEl.addEventListener("click", function () {
   favoritosString = localStorage.getItem("meus-favs");
   favoritos = JSON.parse(favoritosString);
@@ -180,4 +180,8 @@ btnCarregarEl.addEventListener("click", function () {
   favoritos.forEach(insereNaPagina);
   assistidos.forEach(insereNaPagina);
   desejados.forEach(insereNaPagina);
+  confirmacaoEl.classList.add("confirmado");
+  setTimeout(() => {
+    confirmacaoEl.classList.remove("confirmado");
+  }, 2000);
 });

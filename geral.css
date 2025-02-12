@@ -27,6 +27,7 @@
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
+    filter: invert(100%)
 }
 
 ul {
@@ -56,7 +57,8 @@ li a:hover {
 
 html,
 body {
-    background-image: linear-gradient(40deg, rgb(255, 0, 25), rgb(128, 0, 119));
+    background-image: linear-gradient(40deg, rgb(168, 72, 117), rgb(179, 98, 141));
+
     background-repeat: no-repeat;
     min-height: 100vh;
     background-size: cover;
@@ -99,7 +101,14 @@ h2 {
     background-color: rgba(255, 255, 255, 0.122);
     color: white
 }
+.confirmacao{
+ opacity: 0;
+ font-size: 180%;
+}
 
+.confirmado{
+  opacity: 100%;
+}
 /*conteudos*/
 
 .conteudos,
@@ -138,7 +147,8 @@ h2 {
 .classificacao {
     border: 0;
     outline: 0;
-    font: inherit;
+    font-family: "Pompiere", serif;
+    font-size: 130%;
     width: 200px;
     padding: 5px 5px 5px 5px;
     box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
@@ -147,14 +157,94 @@ h2 {
     color: white
 }
 
+.classificacao option{
+    background-color: rgba(134, 131, 134, 0.666);
+}
+
 .favorito {
-    border: 5px solid rgb(234, 199, 0);
+    border: 5px solid rgb(236, 222, 147);
 }
 
 .assistido {
-    border: 5px solid #009434;
+    border: 5px solid #70b888;
 }
 
 .quero-assistir {
-    border: 5px solid #003694;
+    border: 5px solid #7fa1db;
 }
+
+
+
+
+.hamburger {
+    opacity: 0;
+  }
+  
+  @media (max-width: 879px) {
+    header .navbar ul {
+        flex-direction: column;
+      }
+    
+      .hamburger {
+        display: inline-block;
+        height: 2em;
+        width: 2em;
+        border-radius: 3px;
+        border: 1px solid silver;
+        text-align: center;
+        line-height: 2em;
+        box-sizing: border-box;
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.623);
+      }
+    
+      .hamburger:hover {
+        border-color: gray;
+      }
+    
+      .navbar {
+        position: absolute;
+        right: 10px;
+        top: 60px;
+        z-index: 10;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 0.499);
+        border: 1px solid silver;
+        box-shadow: 2px 2px 3px silver;
+        opacity: 0;
+        transition: all 200ms ease-out;
+      }
+    
+      header.menu-visivel > .navbar {
+        top: 60px;
+        opacity: 1;
+      }
+    
+      header.menu-visivel > main {
+        right: 200px;
+      }
+    
+      header.menu-visivel {
+        overflow-x: hidden;
+      }
+    
+      header .navbar ul li ul{
+        position: absolute;
+        right: 0;
+        width: 200px;
+        background: #000000;
+        background-color: rgba(255, 255, 255, 0.488);
+        border: 1px solid silver;
+        box-shadow: 2px 2px 3px silver;
+        padding: 0;
+      }
+      header .navbar ul li:focus-within > ul,
+      header .navbar ul li:active > ul {
+        display: initial;
+      }
+      
+      #alterna-menu {
+        margin: 0 0.5em 0 0;
+        cursor: pointer;
+    }
+  }
