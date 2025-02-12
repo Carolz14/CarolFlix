@@ -185,3 +185,17 @@ btnCarregarEl.addEventListener("click", function () {
     confirmacaoEl.classList.remove("confirmado");
   }, 2000);
 });
+
+
+let btnSobreEl = document.querySelector("#sobrebtn"); 
+let janelaSobreEl = document.querySelector("#janelaSobre");
+btnSobreEl.addEventListener("click", function () {
+
+  janelaSobreEl.style.display = 'block'; 
+  
+});
+
+let btnFecharEl = document.querySelector("#fecharbtn")
+btnFecharEl.addEventListener("click", function () {
+  janelaSobreEl.style.display = 'none';
+})

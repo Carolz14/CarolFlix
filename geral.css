@@ -57,12 +57,12 @@ li a:hover {
 
 html,
 body {
-    background-image: linear-gradient(40deg, rgb(168, 72, 117), rgb(179, 98, 141));
+    background-image: linear-gradient(40deg, rgb(150, 45, 94), rgb(179, 98, 141));
 
     background-repeat: no-repeat;
     min-height: 100vh;
     background-size: cover;
-
+padding-bottom: 10px;
     width: 100%;
     margin: 0;
 }
@@ -76,7 +76,7 @@ p {
     font-family: "Pompiere", serif;
     color: white;
     font-size: 200%;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-bottom: 2%;
 }
 
@@ -90,7 +90,7 @@ h2 {
     margin-bottom: 1%;
 }
 
-#carregarbtn {
+#sobrebtn, #carregarbtn, #fecharbtn{
     border: 0;
     outline: 0;
     font-family: "Pompiere", serif;
@@ -99,8 +99,11 @@ h2 {
     box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.122);
-    color: white
+    color: white;
+    margin: 0.5%;
+    cursor: pointer;
 }
+
 .confirmacao{
  opacity: 0;
  font-size: 180%;
@@ -109,6 +112,38 @@ h2 {
 .confirmado{
   opacity: 100%;
 }
+
+
+/*janela modal*/
+
+.sobre{
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height:10vh ;
+    display: none;
+}
+
+.conteudoSobre{
+    margin: 0 auto;
+    margin-top: 10%;
+  
+    max-width: 600px;
+    border-radius: 10px;
+    background-color: rgb(144, 46, 92) ;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.conteudoSobre h1 {
+    font-size: 300%;
+}
+
+
 /*conteudos*/
 
 .conteudos,
